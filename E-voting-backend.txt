@@ -1,0 +1,109 @@
+E-voting Backend
+
+Base-url : http://13.127.211.205:8000/v1/
+
+Endpoint
+----------------------------------------------------------------
+			Admin
+--------------------------------------------------------------------
+Post req : admin/create
+body : {"name":"garvit", "password":"123"}
+
+post req : login/admin
+body : {"name":"garvit", "password":"123"}
+
+------------------------------------------------------------------------------
+			Voter
+----------------------------------------------------------------
+post req : user/create
+body : 
+{
+"cardNo":"TESTCARD01", 
+"name":"Garvit",
+"fatherName":"Rajubhai",
+"sex":"male",
+"dob":"18/01/2002",
+"assemblyNoandName":"E-utran",
+"partNoandName":"Utran-20",
+"password":"123"
+}
+
+
+get Req : user/list
+get req : user/finduser/:userid
+delete req : user/delete/:userid
+
+-----------------------------------------------------------------
+			party
+-----------------------------------------------------------------
+
+post req : party/create_party
+body : 
+{
+	"party_name":"Bhartiya Janta Party",
+	"party_logo":upload image,
+	"short_code":"BJP",
+}
+
+get req : party/list
+get req : party/findId/:partyid
+delete req : party/delete/:partyid
+
+
+-------------------------------------------------------------------
+			election
+--------------------------------------------------------------------
+
+post req : election/create
+body:
+{
+	election_name:"PM election",
+	date:"27/04/2024"
+}
+
+get req : election/list
+get req : election/findId/:electionid
+delete req : election/delete/:electionid
+
+
+---------------------------------------------------------------------
+			party connection
+--------------------------------------------------------------------
+
+post req : partylist/create
+body:
+{
+	party:"put id of party",
+	election:"put id of election"
+}
+
+get req : partylist/list
+get req : partylist/findId/:listId
+delete req : partlist/delete/:listid
+
+
+---------------------------------------------------------------------
+				vote
+--------------------------------------------------------------------
+post req : vote/create
+body :
+{
+	"user":"put voter id",
+	"party":"put party id"
+}
+get req : vote/list
+get req : vote/findId/:voteid
+delete req : vote/delete/:deleteid
+
+----------------------------------------------------------------------
+				vote count
+----------------------------------------------------------------------
+get req : total/count
+
+
+
+
+
+
+
+
