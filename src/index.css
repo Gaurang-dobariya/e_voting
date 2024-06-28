@@ -1,0 +1,47 @@
+.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+}
+
+.btn:focus-visible {
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+}
+
+td i {
+    cursor: pointer;
+    color: #0d6efd;
+    transition: all 0.2s;
+}
+
+td i:hover {
+    color: red;
+}
+
+.count-box {
+    padding: 40px 130px;
+}
+
+.count-box h4 {
+    font-size: 25px;
+}
+
+.count-box p {
+    font-size: 18px;
+}
+
+.divider {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.divider::before,
+.divider::after {
+    flex: 1;
+    content: '';
+    height: 1px;
+    background-color: lightgray;
+    margin: 5px;
+}

@@ -19,8 +19,4 @@ export let sidebarData=[
         path:"/party connection",
         name:"Party Connection"
     },
-    {
-        path:"/logout",
-        name:"Logout"
-    },
 ]
